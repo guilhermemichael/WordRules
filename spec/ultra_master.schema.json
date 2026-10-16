@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/guilhermemichael/WordRules/blob/main/spec/ultra_master.schema.json",
+  "title": "WordRules Ultra Master Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_id",
+    "protocol_version",
+    "registry_role",
+    "canonical_source",
+    "status_vocabulary",
+    "domains",
+    "rule_count",
+    "behavioral_validation",
+    "rules"
+  ],
+  "properties": {
+    "protocol_id": {
+      "const": "wordrules.ultra_master.rules_registry"
+    },
+    "protocol_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "registry_role": {
+      "type": "string",
+      "minLength": 20
+    },
+    "canonical_source": {
+      "type": "string"
+    },
+    "status_vocabulary": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "PASS",
+          "FAIL",
+          "NOT_VERIFIED",
+          "NOT_APPLICABLE",
+          "NOT_RUN",
+          "BLOCKED",
+          "DISCREPANCY",
+          "OPEN"
+        ]
+      }
+    },
+    "domains": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "rule_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "behavioral_validation": {
+      "const": "NOT_TESTED"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/rule"
+      }
+    }
+  },
+  "$defs": {
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "domain",
+        "domain_description",
+        "normative_level",
+        "scope",
+        "rule_excerpt",
+        "source_path",
+        "source_heading",
+        "static_status",
+        "behavioral_status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z]+-[0-9]{3}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "domain_description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normative_level": {
+          "enum": [
+            "MUST",
+            "MUST_NOT",
+            "SHOULD",
+            "MAY",
+            "GUIDANCE"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rule_excerpt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 560
+        },
+        "source_path": {
+          "const": "ULTRA_MASTER_GUIA_DE_REGRAS_PARA_IA.md"
+        },
+        "source_heading": {
+          "type": "string",
+          "minLength": 1
+        },
+        "static_status": {
+          "const": "STATIC_INDEXED"
+        },
+        "behavioral_status": {
+          "const": "NOT_TESTED"
+        }
+      }
+    }
+  }
+}

@@ -45,3 +45,15 @@ Os caminhos abaixo são nomes observados em `WordRules (2).zip` e na pasta de tr
 2. O guia final usa síntese editorial original e cita fontes; não copia grandes blocos de terceiros.
 3. Licenças foram identificadas pelo nome/presença e por leituras pontuais, não submetidas a parecer jurídico.
 4. A origem exata e o commit de cada pacote compactado não foram confirmados por hash de commit, assinatura ou metadados Git locais; hashes SHA-256 do arquivo compactado são registrados na matriz apenas para identificação deste artefato.
+
+
+## Fontes acrescentadas na versão 3.0.0
+
+| Fonte | URL | Aplicação | Limite |
+|---|---|---|---|
+| JSON Schema Draft 2020-12 | https://json-schema.org/draft/2020-12 | Contratos de formato para registry, protocolo e fixture. | Schema valida estrutura declarada, não verdade ou segurança total. |
+| GitHub Actions — Building and testing Python | https://docs.github.com/en/actions/tutorials/build-and-test-code/python | CI reproduzível em push/PR. | Workflow verde comprova somente as etapas executadas. |
+| OWASP GenAI — Prompt Injection | https://genai.owasp.org/llmrisk/llm01-prompt-injection/ | Separação de instruções/dados, privilégio mínimo e validação. | Mitigações não garantem prevenção universal. |
+| OpenAI — Evals | https://developers.openai.com/api/docs/guides/evals | Avaliação com critérios explícitos e baseline. | Este repositório não executou testes externos. |
+
+Consulta: 16/10/2026. Revalidar referências voláteis antes de produção.

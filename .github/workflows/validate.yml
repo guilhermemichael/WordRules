@@ -1,0 +1,40 @@
+name: Validate WordRules
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wordrules-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Structural and contract validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 2
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - name: Install dev dependency
+        run: python -m pip install -r requirements-dev.txt
+      - name: Python syntax check
+        run: python -m py_compile scripts/validate_wordrules.py
+      - name: Validate contracts, IDs, fixtures and local links
+        run: python scripts/validate_wordrules.py
+      - name: Check committed whitespace
+        run: git diff --check HEAD^ HEAD

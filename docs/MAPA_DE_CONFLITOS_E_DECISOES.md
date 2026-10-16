@@ -1,6 +1,6 @@
 # Mapa de conflitos e decisões de consolidação
 
-**Versão do mapa:** 2.0.1
+**Versão do mapa:** 3.0.0
 **Data da manutenção:** 16 de outubro de 2026
 **Escopo:** reconciliação semântica das versões A e B e das fontes que fundamentam o guia canônico.
 
@@ -20,6 +20,10 @@
 | Evals locais e relatos Reddit | Avaliação autorrelatada não é replicação independente. | Usar como hipótese; criar suíte com critérios e registrar execução real separadamente. | Não declarar eficácia sem evidência. |
 | Contexto longo e instruções extensas | Guia muito grande pode aumentar redundância e competir por atenção. | Guia integral para consulta + camada operacional compacta + módulos sob demanda. | Profundidade sem carregar tudo em toda tarefa. |
 | Regra de segurança e utilidade | Bloqueio total pode impedir ajuda legítima; autonomia excessiva pode causar danos. | Menor privilégio, autorização para ações relevantes e alternativa segura quando possível. | Segurança contextual e útil. |
+
+| Registro machine-readable | JSON e Markdown podem divergir se atualizados separadamente. | Markdown fica normativo; CI compara IDs do guia/registry e da suíte/fixture. | Divergência detectável. |
+| Codificação opaca | Strings binárias podem parecer controle sem protocolo que as interprete. | Usar JSON, schemas e IDs; binário só com interface/decodificador reais. | Sem alegação de obediência mágica. |
+| Avaliação conceitual | Uma suíte escrita não comprova desempenho de modelo. | Manter resultados comportamentais como NOT_RUN até testes reais. | Sem ganho não medido. |
 
 ## Notas de confiança
 

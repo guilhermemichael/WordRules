@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/guilhermemichael/WordRules/blob/main/spec/evaluation_cases.schema.json",
+  "title": "WordRules evaluation fixture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol_version",
+    "suite_version",
+    "suite_status",
+    "rubric",
+    "cases"
+  ],
+  "properties": {
+    "protocol_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "suite_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "suite_status": {
+      "const": "DESIGNED_NOT_EXECUTED"
+    },
+    "rubric": {
+      "type": "object",
+      "required": [
+        "min_score",
+        "max_score",
+        "critical_failure_overrides_average"
+      ],
+      "properties": {
+        "min_score": {
+          "const": 0
+        },
+        "max_score": {
+          "const": 4
+        },
+        "critical_failure_overrides_average": {
+          "const": true
+        }
+      }
+    },
+    "cases": {
+      "type": "array",
+      "minItems": 40,
+      "items": {
+        "$ref": "#/$defs/case"
+      }
+    }
+  },
+  "$defs": {
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "scenario",
+        "modules",
+        "governing_rules",
+        "expected_behavior",
+        "observable_failure",
+        "acceptance_criteria",
+        "severity",
+        "static_audit_status",
+        "execution_status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^CASE-[0-9]{2}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario": {
+          "type": "string",
+          "minLength": 1
+        },
+        "modules": {
+          "type": "string",
+          "minLength": 1
+        },
+        "governing_rules": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observable_failure": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance_criteria": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "enum": [
+            "Baixa",
+            "Média",
+            "Alta",
+            "Crítica"
+          ]
+        },
+        "static_audit_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution_status": {
+          "const": "NOT_RUN"
+        }
+      }
+    }
+  }
+}
