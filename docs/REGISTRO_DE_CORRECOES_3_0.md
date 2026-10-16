@@ -18,4 +18,8 @@ Chame a versão de validada estruturalmente só após executar validador/CI. Tes
 
 ### FIX-011 — Expressões regulares do validador
 
-A primeira CI encontrou escapes duplicados que impediam a contagem de IDs. Corrigidos os padrões de links Markdown, IDs de regras e CASE IDs. O resultado final depende de nova execução observada da CI; não promover a validação a PASS antes disso.
+A primeira execução da CI encontrou escapes duplicados que impediam a contagem de IDs. O patch 3.0.1 corrigiu os padrões de links Markdown, IDs de regras e CASE IDs.
+
+A execução posterior [38906113461](https://github.com/guilhermemichael/WordRules/actions/runs/38906113461) terminou com `completed / success` para o commit [`18c72820153fc5d03f3884cf237280de63ed96be`](https://github.com/guilhermemichael/WordRules/commit/18c72820153fc5d03f3884cf237280de63ed96be). Portanto, a validação estrutural e contratual implementada nesse workflow está `PASS`.
+
+Esse resultado não muda o estado da avaliação comportamental: testes em modelos externos permanecem `NOT_RUN`; melhoria comparativa de desempenho e validação semântica completa permanecem `NOT_VERIFIED`.
