@@ -1,4 +1,4 @@
-# Registro de correções e melhorias — 3.0.0
+# Registro de correções e melhorias — 3.0.1
 
 | ID | Achado | Correção | Verificação esperada | Limite |
 |---|---|---|---|---|
@@ -9,8 +9,13 @@
 | FIX-005 | Estados de evidência confundíveis. | Oito estados explícitos. | Fixture/schema. | Reporte exige honestidade. |
 | FIX-006 | Código binário confundível com controle. | Política de codificação real e auditável. | Regra no guia/protocolo. | Não controla modelos automaticamente. |
 | FIX-007 | Falta de pós-condições. | Contratos e riscos R0–R4. | Protocolo publicado. | Risco depende do contexto. |
-| FIX-008 | Histórico incompleto. | Dois SHAs 2.0.1. | Changelog. | SHA 3.0.0 só após commit. |
+| FIX-008 | Histórico incompleto. | Dois SHAs 2.0.1. | Changelog. | SHA 3.0.1 só após commit. |
 | FIX-009 | Schema confundido com verdade. | Sintaxe/schema/semântica/comportamento separados. | Docs + CI. | Não prova eficácia. |
 | FIX-010 | Novas fontes sem proveniência. | Referências oficiais registradas. | Links documentados. | Revalidar fontes voláteis. |
 
 Chame a versão de validada estruturalmente só após executar validador/CI. Testes externos permanecem NOT_RUN; eficácia NOT_VERIFIED; auditoria jurídica integral NOT_VERIFIED.
+
+
+### FIX-011 — Expressões regulares do validador
+
+A primeira CI encontrou escapes duplicados que impediam a contagem de IDs. Corrigidos os padrões de links Markdown, IDs de regras e CASE IDs. O resultado final depende de nova execução observada da CI; não promover a validação a PASS antes disso.

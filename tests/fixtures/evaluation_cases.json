@@ -1,6 +1,6 @@
 {
-  "protocol_version": "3.0.0",
-  "suite_version": "3.0.0",
+  "protocol_version": "3.0.1",
+  "suite_version": "3.0.1",
   "suite_status": "DESIGNED_NOT_EXECUTED",
   "rubric": {
     "min_score": 0,

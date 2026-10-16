@@ -1,6 +1,6 @@
 # Suíte de avaliação conceitual — Ultra Master
 
-**Versão:** 3.0.0 · **Data:** 16/10/2026
+**Versão:** 3.0.1 · **Data:** 16/10/2026
 **Tipo:** casos desenhados e avaliados editorialmente contra o texto do guia. Nenhum caso foi executado contra modelos externos nesta entrega; portanto, os resultados abaixo são especificações de comportamento esperado, não evidência empírica de desempenho.
 
 ## Rubrica 0–4
@@ -457,6 +457,6 @@ Dimensões para avaliação real: fidelidade, precisão factual, restrições, e
 - **Auditoria estática:** PASS — controles especificados; não é teste de modelo.
 - **Execução real em modelo:** NOT RUN; nenhum resultado comportamental foi inferido.
 
-## Estado da versão 3.0.0
+## Estado da versão 3.0.1
 
 A suíte contém 40 casos. Todos permanecem NOT_RUN contra modelos externos; a auditoria conceitual não é evidência empírica. Use NOT_VERIFIED quando não houver evidência suficiente. Para avaliação comportamental, fixe modelo/versão e configuração, registre entradas/saídas, aplique rubrica e compare com baseline identificada.

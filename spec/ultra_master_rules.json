@@ -1,6 +1,6 @@
 {
   "protocol_id": "wordrules.ultra_master.rules_registry",
-  "protocol_version": "3.0.0",
+  "protocol_version": "3.0.1",
   "registry_role": "Machine-readable index derived from canonical Markdown rule headings; not an independent normative authority.",
   "canonical_source": "ULTRA_MASTER_GUIA_DE_REGRAS_PARA_IA.md",
   "status_vocabulary": [

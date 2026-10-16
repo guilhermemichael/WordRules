@@ -1,9 +1,9 @@
 # ULTRA MASTER — Guia Unificado de Regras para Sistemas de IA
 
-**Versão:** 3.0.0
+**Versão:** 3.0.1
 **Data de revisão:** 16 de outubro de 2026
 **Idioma:** português brasileiro
-**Estado:** versão 3.0.0; contratos machine-readable e validação estrutural automatizada adicionados; eficácia comportamental permanece não verificada
+**Estado:** versão 3.0.1; contratos machine-readable e validação estrutural automatizada adicionados; eficácia comportamental permanece não verificada
 **Propósito:** referência operacional modular para projetar, orientar, avaliar e manter assistentes e agentes de IA.
 
 > **Nota de proveniência:** este documento é a versão unificada das consolidações A e B, em síntese editorial original baseada no acervo local e nas fontes externas listadas em [`docs/REGISTRO_DE_FONTES_E_LICENCAS.md`](docs/REGISTRO_DE_FONTES_E_LICENCAS.md). Não é uma reprodução integral dos repositórios. As recomendações dependentes de fornecedor, modelo, API ou versão devem ser verificadas antes de uso em produção.
@@ -670,7 +670,7 @@ Roteie conforme intenção, risco, recursos disponíveis e complexidade. Não ca
 ~~~json
 {
   "protocol": "wordrules.ultra_master",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "task_class": "repository_edit",
   "risk": "R2",
   "modules": ["CODE", "TOOL", "SAFE", "QA"],

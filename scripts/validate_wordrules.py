@@ -4,7 +4,7 @@ import json, re
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "3.0.0"
+VERSION = "3.0.1"
 ERRORS = []
 
 def fail(message):
@@ -50,7 +50,7 @@ def validate_schema(schema_relative, data_relative, data):
 
 def check_local_markdown_links():
     checked = 0
-    pattern = re.compile(r"(?<!!)\\[[^\\]]+\\]\\(([^)]+)\\)")
+    pattern = re.compile(r"(?<!!)\[[^\]]+\]\(([^)]+)\)")
     for markdown in ROOT.rglob("*.md"):
         if any(part in {".git", ".venv", "node_modules"} for part in markdown.parts):
             continue
@@ -94,7 +94,7 @@ def main():
     suite = read_text("SUITE_DE_AVALIACAO_ULTRA_MASTER.md")
     gitignore = read_text(".gitignore")
 
-    guide_ids = re.findall(r"^### ([A-Z]+-\\d{3}) — .+$", guide, re.M)
+    guide_ids = re.findall(r"^### ([A-Z]+-\d{3}) — .+$", guide, re.M)
     if len(guide_ids) != len(set(guide_ids)):
         fail("Duplicate normative IDs in canonical guide.")
 
@@ -118,7 +118,7 @@ def main():
     if protocol is not None and protocol.get("protocol_version") != VERSION:
         fail("Decision protocol version mismatch.")
 
-    case_ids = re.findall(r"^### (CASE-\\d{2}) — .+$", suite, re.M)
+    case_ids = re.findall(r"^### (CASE-\d{2}) — .+$", suite, re.M)
     if len(case_ids) != 40 or len(case_ids) != len(set(case_ids)):
         fail(f"Expected 40 unique Markdown cases; found {len(case_ids)}.")
     if "NOT_RUN" not in suite or "NOT_VERIFIED" not in suite:

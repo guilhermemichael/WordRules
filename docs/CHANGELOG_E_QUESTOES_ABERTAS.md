@@ -1,5 +1,13 @@
 # Changelog e questões abertas
 
+## 3.0.1 — 16/10/2026 — correção do validador detectada por CI
+
+- Corrigidas as expressões regulares Python: os escapes duplicados impediam reconhecer IDs normativos, CASE IDs e links Markdown.
+- A primeira execução da CI em 3.0.0 falhou nestes controles; a falha foi tratada como defeito real, não ocultada como PASS.
+- Metadados da versão foram alinhados para 3.0.1 nos artefatos versionados.
+- Testes comportamentais em modelos externos continuam `NOT_RUN`; este patch corrige a detecção estrutural, não comprova obediência do modelo.
+
+
 ## 3.0.0 — 16/10/2026 — contratos estruturados e validação automática
 
 **Base auditada:** `26d7396796ae13dd9332fb0feaf01e1df2f820c6`. O SHA do commit 3.0.0 será fornecido pelo Git, não antecipado artificialmente.

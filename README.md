@@ -1,11 +1,11 @@
-# WordRules — Ultra Master 3.0.0
+# WordRules — Ultra Master 3.0.1
 
 Sistema modular de regras para assistentes e agentes de IA com contratos machine-readable, avaliação estruturada e CI para consistência do repositório.
 
 > **Limite central:** CI valida artefatos e invariantes declarados; não demonstra que qualquer modelo seguirá o guia. Os 40 casos permanecem `NOT_RUN` até execução em modelos/versões concretos.
 
 ## Comece aqui
-1. [Guia canônico 3.0.0](ULTRA_MASTER_GUIA_DE_REGRAS_PARA_IA.md)
+1. [Guia canônico 3.0.1](ULTRA_MASTER_GUIA_DE_REGRAS_PARA_IA.md)
 2. [Núcleo operacional compacto](CAMADA_OPERACIONAL_COMPACTA.md)
 3. [Protocolo JSON](spec/decision_protocol.json)
 4. [Registro de regras](spec/ultra_master_rules.json)
@@ -45,6 +45,7 @@ python scripts/validate_wordrules.py
 - [OpenAI — Evals](https://developers.openai.com/api/docs/guides/evals)
 
 ## Versionamento
+- **3.0.1:** hotfix do validador descoberto na primeira execução de CI.
 - **3.0.0:** contratos estruturados, registry, 40 casos, validador e CI.
 - **2.0.1:** manutenção editorial do mapa.
 - **2.0.0:** fusão inicial das consolidações A e B.

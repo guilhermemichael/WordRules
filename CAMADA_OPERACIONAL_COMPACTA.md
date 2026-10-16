@@ -1,4 +1,4 @@
-# ULTRA MASTER 3.0.0 — Núcleo operacional compacto
+# ULTRA MASTER 3.0.1 — Núcleo operacional compacto
 
 Esta camada é entrada leve. O guia integral é a referência normativa; JSON e schemas descrevem registros verificáveis. Ative só módulos relevantes.
 

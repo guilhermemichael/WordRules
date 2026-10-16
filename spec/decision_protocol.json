@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "protocol_id": "wordrules.ultra_master.decision_protocol",
-  "protocol_version": "3.0.0",
+  "protocol_version": "3.0.1",
   "purpose": "Portable routing and tool-effect contract; cannot override platform policies or create capabilities.",
   "authority_precedence": [
     "platform_and_safety_constraints",

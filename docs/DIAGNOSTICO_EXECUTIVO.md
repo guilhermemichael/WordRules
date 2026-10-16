@@ -1,10 +1,12 @@
 # Diagnóstico executivo — consolidação WordRules
 
 **Data:** 16/10/2026
-**Base:** consolidação editorial 2.0.0 das versões A e B. **Evolução 3.0.0:** contratos JSON/schema, validação determinística, fixture de 40 casos e CI; avaliação comportamental continua não executada.
+**Base:** consolidação editorial 2.0.0 das versões A e B. **Evolução 3.0.1:** contratos JSON/schema, validação determinística, fixture de 40 casos e CI; avaliação comportamental continua não executada.
 **Estado global:** útil para revisão e uso controlado; não equivale a auditoria exaustiva de todos os arquivos nem a benchmark de modelos.
 
-## Addendum de engenharia — 3.0.0
+## Addendum de engenharia — 3.0.1
+
+A primeira execução da CI encontrou escapes duplicados nas expressões regulares do validador. O patch 3.0.1 corrige o defeito e registra a falha de forma explícita. A nova execução precisa ser verificada antes de afirmar PASS.
 
 A versão 3.0.0 adiciona registry de regras JSON, protocolo de roteamento/efeitos, schemas Draft 2020-12, fixture de 40 casos, validador e workflow CI. Esses controles verificam consistência dos arquivos, não comportamento de modelos. Ver [registro de correções 3.0.0](REGISTRO_DE_CORRECOES_3_0.md).
 
