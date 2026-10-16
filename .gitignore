@@ -1,0 +1,7 @@
+# Acervo bruto e artefatos de download: documentados por hash, não publicados.
+*.zip
+*.crdownload
+
+# Temporários locais.
+_comparison/
+.tmp/
