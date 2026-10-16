@@ -1,12 +1,8 @@
-# Diagnóstico executivo e mapa de conflitos
+# Mapa de conflitos e decisões de consolidação
 
-# Diagnóstico executivo — consolidação WordRules
-
-**Data:** 16/10/2026
-**Resultado:** versão canônica 2.0.0 criada pela fusão das versões A e B; inventário estrutural concluído; consolidação editorial e avaliação conceitual produzidas.
-**Estado global:** útil para revisão e uso controlado; não equivale a auditoria exaustiva de todos os arquivos nem a benchmark de modelos.
-
-## Mapa de conflitos e decisões de consolidação
+**Versão do mapa:** 2.0.1  
+**Data da manutenção:** 16 de outubro de 2026  
+**Escopo:** reconciliação semântica das versões A e B e das fontes que fundamentam o guia canônico.
 
 | Tema / fontes relacionadas | Tensão observada | Decisão canônica | Consequência |
 |---|---|---|---|

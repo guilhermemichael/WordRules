@@ -1,5 +1,12 @@
 # Changelog e questões em aberto
 
+## 2.0.1 — manutenção editorial
+
+- Removida a reprodução do diagnóstico executivo no início de `docs/MAPA_DE_CONFLITOS_E_DECISOES.md`.
+- Mantido o diagnóstico exclusivamente em `docs/DIAGNOSTICO_EXECUTIVO.md`.
+- Alinhado o título e o escopo do mapa à sua finalidade específica.
+- Commit de manutenção: será registrado após a confirmação do push remoto.
+
 ## 2.0.0 — 16/10/2026
 
 Fusão editorial das consolidações A e B. A arquitetura granular da B foi preservada; a concisão, a ressalva de proveniência e a contagem recomputada da A foram incorporadas. O guia, a camada compacta e a suíte foram sincronizados.
