@@ -5,7 +5,7 @@
 - Removida a reprodução do diagnóstico executivo no início de `docs/MAPA_DE_CONFLITOS_E_DECISOES.md`.
 - Mantido o diagnóstico exclusivamente em `docs/DIAGNOSTICO_EXECUTIVO.md`.
 - Alinhado o título e o escopo do mapa à sua finalidade específica.
-- Commit de manutenção: será registrado após a confirmação do push remoto.
+- Commit de manutenção: `4bc871a149e4a28dd968976b18cded1ce5a6f568`.
 
 ## 2.0.0 — 16/10/2026
 

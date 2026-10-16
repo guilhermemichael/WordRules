@@ -1,7 +1,7 @@
 # Mapa de conflitos e decisões de consolidação
 
-**Versão do mapa:** 2.0.1  
-**Data da manutenção:** 16 de outubro de 2026  
+**Versão do mapa:** 2.0.1
+**Data da manutenção:** 16 de outubro de 2026
 **Escopo:** reconciliação semântica das versões A e B e das fontes que fundamentam o guia canônico.
 
 | Tema / fontes relacionadas | Tensão observada | Decisão canônica | Consequência |
